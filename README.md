@@ -8,8 +8,8 @@ To get started with this application, follow these steps:
 
 1. **Clone the repository**:
    ```
-   git clone <repository-url>
-   cd hello-world-node
+   git clone https://github.com/s7887177/emily-cms.git
+   cd emily-cms
    ```
 
 2. **Install dependencies**:
@@ -19,14 +19,8 @@ To get started with this application, follow these steps:
 
 3. **Run the application**:
    ```
-   node src/index.js
+   npm start
    ```
 
 4. **Access the application**:
    Open your web browser and navigate to `http://localhost:3000`. You should see the message "Hello, World!".
-
-## Project Structure
-
-- `src/index.js`: The entry point of the application.
-- `package.json`: Configuration file for npm, listing dependencies and scripts.
-- `README.md`: Documentation for the project.
