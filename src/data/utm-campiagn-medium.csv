@@ -1,0 +1,12 @@
+id,name,description,type
+0,post,社群(一般貼文),Online
+1,socialad,社群(廣告),Online
+2,video,影片,Online
+3,short,短影音,Online
+4,email,EDM電子郵件,Online
+5,qrcode,QR code,Online
+6,gsm,關鍵字廣告,Online
+7,companywebsite,官方網站,Online
+8,story,IG限時動態,Online
+9,reels,IG連續短片,Online
+10,offline,線下展覽,Offline

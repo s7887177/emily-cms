@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emily CMS</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Emily CMS</h1>
+
+    <div class="card">
+      <h2>Add New Article</h2>
+      <form id="article-form">
+        <div class="form-group">
+          <label for="title">Article Title:</label>
+          <input type="text" id="title" name="title" required>
+        </div>
+        <div class="form-group">
+          <label for="url">Article URL:</label>
+          <input type="url" id="url" name="url" required>
+        </div>
+        <div class="form-group">
+          <label for="utm_type">UTM Type:</label>
+          <select id="utm_type" name="utm_type" required>
+            <option value="">Select a type</option>
+            <!-- Will be populated via JavaScript -->
+          </select>
+        </div>
+        <button type="submit">Save Article</button>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2>Article List</h2>
+      <div id="article-list">
+        <p>No articles yet.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>UTM Generator</h2>
+      <form id="utm-form">
+        <div class="form-group">
+          <label for="utm-article">Select Article:</label>
+          <select id="utm-article" required>
+            <option value="">Select an article</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="utm-source">Campaign Source:</label>
+          <select id="utm-source" required>
+            <option value="">Select a source</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="utm-medium">Campaign Medium:</label>
+          <select id="utm-medium" required>
+            <option value="">Select a medium</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>
+            <input type="checkbox" id="shorten-url">
+            Generate Short URL
+          </label>
+        </div>
+
+        <button type="submit">Generate UTM URL</button>
+      </form>
+
+      <div id="utm-result" class="hidden">
+        <h3>Generated URLs</h3>
+        <div class="form-group">
+          <label for="utm-full-url">UTM URL:</label>
+          <div class="input-with-button">
+            <input type="text" id="utm-full-url" readonly>
+            <button type="button" class="copy-button" data-target="utm-full-url">Copy</button>
+          </div>
+        </div>
+
+        <div class="form-group" id="short-url-container">
+          <label for="utm-short-url">Short URL:</label>
+          <div class="input-with-button">
+            <input type="text" id="utm-short-url" readonly>
+            <button type="button" class="copy-button" data-target="utm-short-url">Copy</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-utm-urls">
+      <h2>Generated UTM URLs</h2>
+      <button id="refresh-utm-urls">Refresh</button>
+      <div id="utm-urls-list">
+        <p>No UTM URLs yet.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Article Widget</h2>
+      <div id="widget-container">
+        <div id="widget-preview"></div>
+        <p>Copy this code to use the widget:</p>
+        <textarea id="widget-code" readonly>
+<iframe src="http://${hostname}:${port}/api/widget" width="300" height="50" frameborder="0"></iframe>
+        </textarea>
+      </div>
+    </div>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+
+</html>
