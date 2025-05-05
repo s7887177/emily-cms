@@ -23,4 +23,4 @@ To get started with this application, follow these steps:
    ```
 
 4. **Access the application**:
-   Open your web browser and navigate to `http://localhost:3000`. You should see the message "Hello, World!".
+   Open your web browser and navigate to `http://localhost:3000`.
